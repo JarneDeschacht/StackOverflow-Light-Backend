@@ -1,0 +1,14 @@
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\bin\Debug\netcoreapp2.2\StackOverflowLight-api.deps.json
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\bin\Debug\netcoreapp2.2\StackOverflowLight-api.runtimeconfig.json
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\bin\Debug\netcoreapp2.2\StackOverflowLight-api.runtimeconfig.dev.json
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\bin\Debug\netcoreapp2.2\StackOverflowLight-api.dll
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\obj\Debug\netcoreapp2.2\StackOverflowLight-api.csprojAssemblyReference.cache
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\obj\Debug\netcoreapp2.2\StackOverflowLight-api.csproj.CoreCompileInputs.cache
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\obj\Debug\netcoreapp2.2\StackOverflowLight-api.RazorAssemblyInfo.cache
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\obj\Debug\netcoreapp2.2\StackOverflowLight-api.RazorAssemblyInfo.cs
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\obj\Debug\netcoreapp2.2\StackOverflowLight-api.AssemblyInfoInputs.cache
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\obj\Debug\netcoreapp2.2\StackOverflowLight-api.AssemblyInfo.cs
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\obj\Debug\netcoreapp2.2\StackOverflowLight-api.RazorTargetAssemblyInfo.cache
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\bin\Debug\netcoreapp2.2\StackOverflowLight-api.pdb
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\obj\Debug\netcoreapp2.2\StackOverflowLight-api.dll
+C:\Users\Jarne\OneDrive\Projecten\StackOverflow-Light-Backend\StackOverflowLight-api\obj\Debug\netcoreapp2.2\StackOverflowLight-api.pdb

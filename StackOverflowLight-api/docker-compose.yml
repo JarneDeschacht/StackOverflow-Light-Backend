@@ -11,7 +11,7 @@ services:
       - "postgres_image"
     build:
       context: .
-      dockerfile: StackOverflowLight-api/Dockerfile
+      dockerfile: Dockerfile
     ports:
       - "8000:80"     
     environment:
@@ -34,6 +34,5 @@ services:
       - stackoverflowlight-api-dev
 volumes:
   db_volume:
-         
     
      

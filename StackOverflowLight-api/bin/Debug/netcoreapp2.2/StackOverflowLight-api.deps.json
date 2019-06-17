@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "dfc8a9bff2d7d92fe41976be255a96dbb8586acc"
+    "signature": "96b861c4038c844736e96cf528bce2a291b697c9"
   },
   "compilationOptions": {
     "defines": [
@@ -28,7 +28,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.2105168",
-          "NSwag.AspNetCore": "13.0.1",
+          "NSwag.AspNetCore": "12.0.15",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "2.2.4"
         },
         "runtime": {
@@ -254,34 +254,19 @@
       "Microsoft.NETCore.Platforms/2.2.0": {},
       "Microsoft.NETCore.Targets/2.0.0": {},
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.0.2105168": {},
-      "Namotion.Reflection/1.0.5": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Namotion.Reflection.dll": {
-            "assemblyVersion": "1.0.5.0",
-            "fileVersion": "1.0.5.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Namotion.Reflection.dll": {}
-        }
-      },
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0"
         }
       },
-      "NJsonSchema/10.0.19": {
+      "NJsonSchema/9.13.22": {
         "dependencies": {
-          "Namotion.Reflection": "1.0.5",
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/NJsonSchema.dll": {
-            "assemblyVersion": "10.0.19.0",
-            "fileVersion": "10.0.19.0"
+            "assemblyVersion": "9.13.22.0",
+            "fileVersion": "9.13.22.0"
           }
         },
         "compile": {
@@ -322,87 +307,107 @@
           "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
         }
       },
-      "NSwag.Annotations/13.0.1": {
+      "NSwag.Annotations/12.0.15": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
         "runtime": {
           "lib/netstandard2.0/NSwag.Annotations.dll": {
-            "assemblyVersion": "13.0.1.0",
-            "fileVersion": "13.0.1.0"
+            "assemblyVersion": "12.0.15.0",
+            "fileVersion": "12.0.15.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/NSwag.Annotations.dll": {}
         }
       },
-      "NSwag.AspNetCore/13.0.1": {
+      "NSwag.AspNetCore/12.0.15": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
           "Microsoft.AspNetCore.StaticFiles": "2.2.0",
           "Microsoft.Extensions.FileProviders.Embedded": "2.2.0",
-          "NSwag.Annotations": "13.0.1",
-          "NSwag.Core": "13.0.1",
-          "NSwag.Generation": "13.0.1",
-          "NSwag.Generation.AspNetCore": "13.0.1",
+          "NSwag.Annotations": "12.0.15",
+          "NSwag.Core": "12.0.15",
+          "NSwag.SwaggerGeneration": "12.0.15",
+          "NSwag.SwaggerGeneration.AspNetCore": "12.0.15",
+          "NSwag.SwaggerGeneration.WebApi": "12.0.15",
           "System.IO.FileSystem": "4.3.0",
           "System.Xml.XPath.XDocument": "4.3.0"
         },
         "runtime": {
           "lib/netstandard2.0/NSwag.AspNetCore.dll": {
-            "assemblyVersion": "13.0.1.0",
-            "fileVersion": "13.0.1.0"
+            "assemblyVersion": "12.0.15.0",
+            "fileVersion": "12.0.15.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/NSwag.AspNetCore.dll": {}
         }
       },
-      "NSwag.Core/13.0.1": {
+      "NSwag.Core/12.0.15": {
         "dependencies": {
-          "NJsonSchema": "10.0.19",
+          "NJsonSchema": "9.13.22",
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/NSwag.Core.dll": {
-            "assemblyVersion": "13.0.1.0",
-            "fileVersion": "13.0.1.0"
+            "assemblyVersion": "12.0.15.0",
+            "fileVersion": "12.0.15.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/NSwag.Core.dll": {}
         }
       },
-      "NSwag.Generation/13.0.1": {
+      "NSwag.SwaggerGeneration/12.0.15": {
         "dependencies": {
-          "NJsonSchema": "10.0.19",
-          "NSwag.Core": "13.0.1",
+          "NJsonSchema": "9.13.22",
+          "NSwag.Core": "12.0.15",
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
-          "lib/netstandard2.0/NSwag.Generation.dll": {
-            "assemblyVersion": "13.0.1.0",
-            "fileVersion": "13.0.1.0"
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.dll": {
+            "assemblyVersion": "12.0.15.0",
+            "fileVersion": "12.0.15.0"
           }
         },
         "compile": {
-          "lib/netstandard2.0/NSwag.Generation.dll": {}
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.dll": {}
         }
       },
-      "NSwag.Generation.AspNetCore/13.0.1": {
+      "NSwag.SwaggerGeneration.AspNetCore/12.0.15": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
-          "NJsonSchema": "10.0.19",
-          "NSwag.Generation": "13.0.1"
+          "NJsonSchema": "9.13.22",
+          "NSwag.SwaggerGeneration": "12.0.15"
         },
         "runtime": {
-          "lib/netstandard2.0/NSwag.Generation.AspNetCore.dll": {
-            "assemblyVersion": "13.0.1.0",
-            "fileVersion": "13.0.1.0"
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.AspNetCore.dll": {
+            "assemblyVersion": "12.0.15.0",
+            "fileVersion": "12.0.15.0"
           }
         },
         "compile": {
-          "lib/netstandard2.0/NSwag.Generation.AspNetCore.dll": {}
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.AspNetCore.dll": {}
+        }
+      },
+      "NSwag.SwaggerGeneration.WebApi/12.0.15": {
+        "dependencies": {
+          "NJsonSchema": "9.13.22",
+          "NSwag.SwaggerGeneration": "12.0.15",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.WebApi.dll": {
+            "assemblyVersion": "12.0.15.0",
+            "fileVersion": "12.0.15.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NSwag.SwaggerGeneration.WebApi.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -3468,13 +3473,6 @@
       "path": "microsoft.visualstudio.azure.containers.tools.targets/1.0.2105168",
       "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.0.2105168.nupkg.sha512"
     },
-    "Namotion.Reflection/1.0.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+WM4NfO91TVvrLjBKh5jYNV1aOnu09Elb0JgUIoKpv2GuGn2nVYd1y9LlKMTTuwF9DHrEQ47xXqqSFTOPPVxlQ==",
-      "path": "namotion.reflection/1.0.5",
-      "hashPath": "namotion.reflection.1.0.5.nupkg.sha512"
-    },
     "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
@@ -3482,12 +3480,12 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
-    "NJsonSchema/10.0.19": {
+    "NJsonSchema/9.13.22": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9f+UFP08XVy96yWt1GY7k3lFZkItapxa1aq6z36F8IdXSWPwKAekWovzkT2FuiuA4NJVt0qHZ3af9qUWFKtnRA==",
-      "path": "njsonschema/10.0.19",
-      "hashPath": "njsonschema.10.0.19.nupkg.sha512"
+      "sha512": "sha512-mJpvPfiVzqF8aVOaHyYBkZGwNfGMYdKB7Q6kQboFsNCLpbv8fwIrL7r22qXaK3CJYczrWw0PdT+sjTHa3CB38g==",
+      "path": "njsonschema/9.13.22",
+      "hashPath": "njsonschema.9.13.22.nupkg.sha512"
     },
     "Npgsql/4.0.7": {
       "type": "package",
@@ -3503,40 +3501,47 @@
       "path": "npgsql.entityframeworkcore.postgresql/2.2.4",
       "hashPath": "npgsql.entityframeworkcore.postgresql.2.2.4.nupkg.sha512"
     },
-    "NSwag.Annotations/13.0.1": {
+    "NSwag.Annotations/12.0.15": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SKejcJXAITpHDoLSiQcTR0m1Tqmw2QPGf3mmfN0DjzFoYEOQcPBL1qhaX12l998Gzvpi58azjhRi+9+2KWaxwQ==",
-      "path": "nswag.annotations/13.0.1",
-      "hashPath": "nswag.annotations.13.0.1.nupkg.sha512"
+      "sha512": "sha512-B8Cd+0MN529Orrd+yo6PnMuTJjJr0vd6C7nEMfMwfvrYJUjYG3OkSdiPSwU0RdaPUBiqAxr9ruZTqujKyB/jOA==",
+      "path": "nswag.annotations/12.0.15",
+      "hashPath": "nswag.annotations.12.0.15.nupkg.sha512"
     },
-    "NSwag.AspNetCore/13.0.1": {
+    "NSwag.AspNetCore/12.0.15": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-60uxngxzFqpFgJnAB85KvnaL0Qcbq0NHRn2u1nbcfBSYOifCi45HRp9P8hHcf9dlb3O3D8bN3QnuBZnSp3No8g==",
-      "path": "nswag.aspnetcore/13.0.1",
-      "hashPath": "nswag.aspnetcore.13.0.1.nupkg.sha512"
+      "sha512": "sha512-idhm2wogkQ/GE+1X9rGAxRSmEJPzS8woto7zdSGcGNUt1UQwPFiCCvLrQ5jlIRABv2qmGPDkseaa4h/fDGrNpw==",
+      "path": "nswag.aspnetcore/12.0.15",
+      "hashPath": "nswag.aspnetcore.12.0.15.nupkg.sha512"
     },
-    "NSwag.Core/13.0.1": {
+    "NSwag.Core/12.0.15": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-V3RLPpMNRRom5qlN9ijgXYE0/WAKucow9C+FHUrSbPnjMcP3z5e0ysOXdYJfrcQvCThYpNXLbgWfRxO3Q1H0rw==",
-      "path": "nswag.core/13.0.1",
-      "hashPath": "nswag.core.13.0.1.nupkg.sha512"
+      "sha512": "sha512-2LN9XBrom48hZQB5cHuU1YE766Gm3CpEQCUVKVxPUNGqYqeKuO2BQepTnEI9TRyQZt6Zl1UD73pQI0UvyFpbPg==",
+      "path": "nswag.core/12.0.15",
+      "hashPath": "nswag.core.12.0.15.nupkg.sha512"
     },
-    "NSwag.Generation/13.0.1": {
+    "NSwag.SwaggerGeneration/12.0.15": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xC1KB7xBX7BeE8ot7jU84NN4ZGvXaBdQeLziCT74jrIWWT1NT6SMNnkUH3gvoGmjyk1vCRr8rxu7VB6OThI4HQ==",
-      "path": "nswag.generation/13.0.1",
-      "hashPath": "nswag.generation.13.0.1.nupkg.sha512"
+      "sha512": "sha512-OT8uCClmVDM02lBhNKU1DBKBSDD+yL+YWVHUhMLwQqtwjhjRXStIoayQ4t4k65rnBjHnJ8x1gsADJl5Cw0VS0Q==",
+      "path": "nswag.swaggergeneration/12.0.15",
+      "hashPath": "nswag.swaggergeneration.12.0.15.nupkg.sha512"
     },
-    "NSwag.Generation.AspNetCore/13.0.1": {
+    "NSwag.SwaggerGeneration.AspNetCore/12.0.15": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/THXjBC7QYkcI5jiMNuW8U/0US0h8yyAOHl35n+R5t2jxm0C4CJNaef3KwOmrONGTuRloSPCo0AdREaWOFJyRA==",
-      "path": "nswag.generation.aspnetcore/13.0.1",
-      "hashPath": "nswag.generation.aspnetcore.13.0.1.nupkg.sha512"
+      "sha512": "sha512-6tSoPhrHLtBPAcWgLxmlW9n6exm8Y5dDHSqOJu/B8UVNzG/rFu3aP1Z1+Kk378nxtz9Glz3oTmkwnSn/8G9pEQ==",
+      "path": "nswag.swaggergeneration.aspnetcore/12.0.15",
+      "hashPath": "nswag.swaggergeneration.aspnetcore.12.0.15.nupkg.sha512"
+    },
+    "NSwag.SwaggerGeneration.WebApi/12.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D5JwCiJwQbqjTWEwZsVBY+I54QC3DoEhI51ydHZB+kbBYXeBGb+0O0ltTjUfXrwvsd2R6KM2OIXYtr1iYp8FlA==",
+      "path": "nswag.swaggergeneration.webapi/12.0.15",
+      "hashPath": "nswag.swaggergeneration.webapi.12.0.15.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",

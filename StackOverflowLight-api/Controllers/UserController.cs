@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using StackOverflowLight_api.Models;
 
@@ -33,16 +34,6 @@ namespace StackOverflowLight_api.Controllers
                 return NotFound();
             return user;
         }
-        [HttpPost]
-        public ActionResult<User> PostUser(User user)
-        {
-            if (user == null)
-                return NotFound();
-
-            _userRepository.Add(user);
-            _userRepository.SaveChanges();
-            return user;
-        }
         [HttpPut("{id}")]
         public ActionResult<User> PutUser(int id, User user)
         {
@@ -62,6 +53,7 @@ namespace StackOverflowLight_api.Controllers
 
             _userRepository.Delete(user);
             _userRepository.SaveChanges();
+
             return user;
         }
     }

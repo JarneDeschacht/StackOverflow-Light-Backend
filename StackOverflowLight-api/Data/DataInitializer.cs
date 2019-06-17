@@ -1,4 +1,5 @@
-﻿using StackOverflowLight_api.Models;
+﻿using Microsoft.AspNetCore.Identity;
+using StackOverflowLight_api.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,12 @@ namespace StackOverflowLight_api.Data
     public class DataInitializer
     {
         private readonly StackOverflowContext _dbContext;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public DataInitializer(StackOverflowContext dbcontext)
+        public DataInitializer(StackOverflowContext dbcontext, UserManager<IdentityUser> userManager)
         {
             _dbContext = dbcontext;
+            _userManager = userManager;
         }
         public async Task InitializeData()
         {
@@ -27,8 +30,19 @@ namespace StackOverflowLight_api.Data
                 _dbContext.Users_Domain.Add(tijs);
                 User robbe = new User("Robbe", "Dekien", "robbedekien@gmail.com");
                 _dbContext.Users_Domain.Add(robbe);
+
+                await CreateUser(jarne.Email, "P@ssword1111");
+                await CreateUser(ime.Email, "P@ssword1111");
+                await CreateUser(tijs.Email, "P@ssword1111");
+                await CreateUser(robbe.Email, "P@ssword1111");
+
                 _dbContext.SaveChanges();
             }
+        }
+        private async Task CreateUser(string email, string password)
+        {
+            var user = new IdentityUser { UserName = email, Email = email };
+            await _userManager.CreateAsync(user, password);
         }
     }
 }

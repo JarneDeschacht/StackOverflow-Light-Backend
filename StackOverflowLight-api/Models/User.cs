@@ -18,7 +18,7 @@ namespace StackOverflowLight_api.Models
             LastName = lastname;
             Email = email;
         }
-        private User()
+        public User()
         {
 
         }

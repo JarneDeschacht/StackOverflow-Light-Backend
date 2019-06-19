@@ -12,6 +12,7 @@ namespace StackOverflowLight_api.Data
     public class StackOverflowContext : IdentityDbContext
     {
         public DbSet<User> Users_Domain { get; set; }
+        public DbSet<Post> Posts { get; set; }
 
         public StackOverflowContext(DbContextOptions<StackOverflowContext> options) : base(options){}
 
@@ -19,6 +20,9 @@ namespace StackOverflowLight_api.Data
         {
             base.OnModelCreating(builder);
             builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new PostConfiguration());
+            builder.ApplyConfiguration(new VoteConfiguration());
+            builder.ApplyConfiguration(new AnswerConfiguration());
         }
     }
 }

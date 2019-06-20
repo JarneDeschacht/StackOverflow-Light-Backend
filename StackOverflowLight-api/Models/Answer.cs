@@ -16,11 +16,11 @@ namespace StackOverflowLight_api.Models
         {
             Body = body;
             User = user;
-            CreationTime = DateTime.UtcNow;
+            CreationTime = DateTime.Now;
         }
         public Answer()
         {
-            CreationTime = DateTime.UtcNow;
+            CreationTime = DateTime.Now;
         }
     }
 }

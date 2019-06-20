@@ -13,8 +13,7 @@ namespace StackOverflowLight_api.Models
         public User Owner { get; set; }
         public ICollection<Vote> Votes { get; set; }
         public ICollection<Answer> Answers { get; set; }
-        public int Score => Votes.Where(v => v.VoteType == VoteType.Upvote).Count()
-            - Votes.Where(v => v.VoteType == VoteType.Downvote).Count();
+        public int Score { get; set; }
         public DateTime CreationTime { get; set; }
 
         public Post(string title,string body,User owner)
@@ -24,21 +23,39 @@ namespace StackOverflowLight_api.Models
             Owner = owner;
             Votes = new List<Vote>();
             Answers = new List<Answer>();
-            CreationTime = DateTime.UtcNow;
+            CreationTime = DateTime.Now;
+            Score = 0;
         }
         public Post()
         {
             Votes = new List<Vote>();
             Answers = new List<Answer>();
-            CreationTime = DateTime.UtcNow;
+            CreationTime = DateTime.Now;
+            Score = 0;
         }
         public void AddVote(Vote vote)
         {
+            RemoveVote(vote.User.UserId);
             Votes.Add(vote);
+            setScore();
         }
+
+        private void setScore()
+        {
+            Score = Votes.Where(v => v.VoteType == VoteType.Upvote).Count()
+            - Votes.Where(v => v.VoteType == VoteType.Downvote).Count();
+        }
+
         public void AddAnswer(Answer answer)
         {
             Answers.Add(answer);
+            setScore();
+        }
+        public void RemoveVote(int user)
+        {
+            var vote = Votes.SingleOrDefault(v => v.User.UserId == user);
+            Votes.Remove(vote);
+            setScore();
         }
     }
 }

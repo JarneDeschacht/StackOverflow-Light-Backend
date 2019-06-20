@@ -52,6 +52,7 @@ namespace StackOverflowLight_api
 
             services.AddScoped<DataInitializer>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IPostRepository, PostRepository>();
 
             services.AddIdentity<IdentityUser, IdentityRole>(cfg => cfg.User.RequireUniqueEmail = true).AddEntityFrameworkStores<StackOverflowContext>();
 

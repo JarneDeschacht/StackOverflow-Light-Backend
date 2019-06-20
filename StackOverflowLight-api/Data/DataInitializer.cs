@@ -19,7 +19,7 @@ namespace StackOverflowLight_api.Data
         }
         public async Task InitializeData()
         {
-            _dbContext.Database.EnsureDeleted();
+            //_dbContext.Database.EnsureDeleted();
             if (_dbContext.Database.EnsureCreated())
             {
                 User jarne = new User("Jarne", "Deschacht", "jarne.deschacht@hotmail.com");
@@ -59,6 +59,8 @@ namespace StackOverflowLight_api.Data
                     " die nog in aanbouw zijn. Verscheidene versies hebben zich ontwikkeld in de loop van de jaren, soms per ongeluk soms expres" +
                     " (ingevoegde humor en dergelijke).", robbe);
                 post2.AddVote(new Vote(jarne, VoteType.Downvote));
+                post2.AddVote(new Vote(tijs, VoteType.Downvote));
+                post2.AddVote(new Vote(ime, VoteType.Downvote));
                 _dbContext.Posts.Add(post2);
 
                 Post post3 = new Post("Test 3", "Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. " +
@@ -86,6 +88,8 @@ namespace StackOverflowLight_api.Data
                 post4.AddVote(new Vote(jarne, VoteType.Upvote));
                 post4.AddVote(new Vote(ime, VoteType.Upvote));
                 post4.AddVote(new Vote(robbe, VoteType.Upvote));
+                post4.AddVote(new Vote(robbe, VoteType.Downvote));
+                post4.RemoveVote(robbe.UserId);
                 post4.AddAnswer(new Answer("answer 1", jarne));
                 _dbContext.Posts.Add(post4);
 

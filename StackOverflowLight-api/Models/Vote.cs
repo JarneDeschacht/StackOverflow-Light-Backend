@@ -16,11 +16,11 @@ namespace StackOverflowLight_api.Models
         {
             User = user;
             VoteType = type;
-            CreationTime = DateTime.UtcNow;
+            CreationTime = DateTime.Now;
         }
         public Vote()
         {
-            CreationTime = DateTime.UtcNow;
+            CreationTime = DateTime.Now;
         }
     }
 }

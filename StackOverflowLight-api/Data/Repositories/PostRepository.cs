@@ -40,8 +40,8 @@ namespace StackOverflowLight_api.Data.Repositories
         {
             return _posts
                 .Include(p => p.Owner)
-                .Include(p => p.Votes)
-                .Include(p => p.Answers)
+                .Include(p => p.Votes).ThenInclude(v => v.User)
+                .Include(p => p.Answers).ThenInclude(v => v.User)
                 .OrderByDescending(p => p.Score)
                 .ThenBy(p => p.CreationTime)
                 .ToList();
@@ -56,8 +56,9 @@ namespace StackOverflowLight_api.Data.Repositories
             return _posts
                 .Include(p => p.Owner)
                 .Include(p => p.Votes).ThenInclude(v => v.User)
-                .Include(p => p.Answers)
+                .Include(p => p.Answers).ThenInclude(v => v.User)
                 .SingleOrDefault(p => p.PostId == id);
+
         }
     }
 }

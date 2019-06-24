@@ -70,7 +70,7 @@ namespace StackOverflowLight_api.Controllers
         }
         [Authorize]
         [HttpPost("{id}/answers")]
-        public ActionResult<Vote> AddAnswer(int id, AnswerDTO answer)
+        public ActionResult<Answer> AddAnswer(int id, AnswerDTO answer)
         {
             var user = _userRepository.GetById(answer.userId);
 
@@ -85,7 +85,7 @@ namespace StackOverflowLight_api.Controllers
             return Ok(newAnswer);
         }
         [Authorize]
-        [HttpDelete("{id}/votes")]
+        [HttpPost("{id}/deletevotes/{userid}")]
         public ActionResult<Vote> RemoveVote(int id, int userid)
         {
             _postRepository.RemoveVote(id, userid);

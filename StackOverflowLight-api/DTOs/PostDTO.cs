@@ -8,7 +8,7 @@ namespace StackOverflowLight_api.DTOs
 {
     public class PostDTO
     {
-        [Required,MaxLength(100)]
+        [Required,MaxLength(80)]
         public string Title { get; set; }
         [Required]
         public string Body { get; set; }

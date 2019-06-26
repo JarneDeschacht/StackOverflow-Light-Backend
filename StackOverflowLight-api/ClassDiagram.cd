@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="StackOverflowLight_api.Models.Answer">
-    <Position X="7.25" Y="1.5" Width="2.75" />
+    <Position X="7.75" Y="1.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>ABABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Models\Answer.cs</FileName>
@@ -11,24 +11,36 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="StackOverflowLight_api.Models.Post">
-    <Position X="3.25" Y="4.75" Width="3" />
-    <AssociationLine Name="Votes" Type="StackOverflowLight_api.Models.Vote" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="3.625" Y="4.75" />
-        <Point X="3.625" Y="3.259" />
-        <Point X="3.25" Y="3.259" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.342" Y="-0.634" />
-      </MemberNameLabel>
-    </AssociationLine>
+    <Position X="3.75" Y="4.75" Width="3" />
     <AssociationLine Name="Owner" Type="StackOverflowLight_api.Models.User">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.06" Y="0.088" />
       </MemberNameLabel>
     </AssociationLine>
+    <AssociationLine Name="Votes" Type="StackOverflowLight_api.Models.Vote" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.312" />
+        <Point X="3.5" Y="5.312" />
+        <Point X="3.5" Y="3.25" />
+        <Point X="3.25" Y="3.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.342" Y="-0.634" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Answers" Type="StackOverflowLight_api.Models.Answer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="5.312" />
+        <Point X="7.125" Y="5.312" />
+        <Point X="7.125" Y="3.25" />
+        <Point X="7.75" Y="3.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.005" Y="-0.362" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ACAAAACAAAAAAEkBAAABAAAAAAAQAAAAQAAAgAgAAAA=</HashCode>
+      <HashCode>ACAAAACAAAAAAEkBAAABAAAAAAAQCAAAQAAAgAgAAAA=</HashCode>
       <FileName>Models\Post.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -40,7 +52,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="StackOverflowLight_api.Models.User">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAACAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Models\User.cs</FileName>
@@ -50,10 +62,10 @@
     <Position X="0.5" Y="1.5" Width="2.75" />
     <AssociationLine Name="User" Type="StackOverflowLight_api.Models.User" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="3.25" Y="1.875" />
-        <Point X="3.625" Y="1.875" />
-        <Point X="3.625" Y="2.125" />
-        <Point X="4" Y="2.125" />
+        <Point X="3.25" Y="2.188" />
+        <Point X="3.75" Y="2.188" />
+        <Point X="3.75" Y="2.188" />
+        <Point X="4.25" Y="2.188" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -65,21 +77,21 @@
     </ShowAsAssociation>
   </Class>
   <Interface Name="StackOverflowLight_api.Models.IUserRepository">
-    <Position X="10.75" Y="3" Width="2.75" />
+    <Position X="11" Y="3" Width="2.75" />
     <TypeIdentifier>
       <HashCode>gAYAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAgAAAAAAAIA=</HashCode>
       <FileName>Models\IUserRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="StackOverflowLight_api.Models.IPostRepository">
-    <Position X="10.75" Y="0.5" Width="2.75" />
+    <Position X="11" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>gAAABAAAAAAAAAARAAAAAAAAAAAQAAAAAgAAAAgAAAA=</HashCode>
+      <HashCode>gAAABAAAAAAAAAABAAAAAAAAAAAQAAAAAgAAAAgAAIA=</HashCode>
       <FileName>Models\IPostRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="StackOverflowLight_api.Models.VoteType">
-    <Position X="10.75" Y="5.5" Width="1.5" />
+    <Position X="11" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Models\VoteType.cs</FileName>

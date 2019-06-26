@@ -31,9 +31,7 @@ namespace StackOverflowLight_api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            //var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING"); for docker
-            var connectionString = "Server=.\\sqlexpress;Database=stackoverflowdb;Trusted_Connection=True";
-            services.AddDbContext<StackOverflowContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<StackOverflowContext>(options => options.UseSqlServer("Server=.\\sqlexpress;Database=stackoverflowdb;Trusted_Connection=True"));
 
             services.AddOpenApiDocument(c => {
                 c.DocumentName = "apidocs";

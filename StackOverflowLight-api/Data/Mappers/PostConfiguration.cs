@@ -16,7 +16,7 @@ namespace StackOverflowLight_api.Data.Mappers
             builder.HasKey(p => p.PostId);
             builder.Property(p => p.Title)
                .IsRequired()
-               .HasMaxLength(100);
+               .HasMaxLength(80);
             builder.Property(p => p.Body)
                 .IsRequired();
             builder.HasOne(p => p.Owner)
